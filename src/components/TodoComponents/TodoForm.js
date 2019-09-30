@@ -13,15 +13,19 @@ class TodoForm extends React.Component {
         });
     };
 
+    sumbitNew = e => {
+        e.prevent.default();
+        this.props.addItem(this.state.task)
+    };
   
     render() {
         return (
-            <form onSubmit={}>
+            <form onSubmit={this.sumbitNew}>
                 <input
                     type="text"
-                    value={}
+                    value={this.task}
                     name="task"
-                    onChange={}
+                    onChange={this.handleChange}
                 />
                 <button>Add ToDo</button>
             </form>
