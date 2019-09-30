@@ -27,6 +27,18 @@ class App extends React.Component {
     });
   };
 
+  // Add and Delete for todoForm
+  addItem = taskName => {
+    const newTask = {
+      task: taskName,
+      id: Date.now(),
+      completed: false
+    };
+    this.setState({
+      todo: [...this.state.todo, newTask]
+    });
+  };
+
 
 
   render() {
