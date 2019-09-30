@@ -1,8 +1,8 @@
 import React from 'react'
 
 class TodoForm extends React.Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             task: ''
         };
@@ -23,7 +23,7 @@ class TodoForm extends React.Component {
             <form onSubmit={this.sumbitNew}>
                 <input
                     type="text"
-                    value={this.task}
+                    value={this.state.task}
                     name="task"
                     onChange={this.handleChange}
                 />
