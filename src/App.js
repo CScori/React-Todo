@@ -23,6 +23,25 @@ class App extends React.Component {
     };
   }
 
+  toggleItem = id => {
+    console.log(id);
+    // Update groceries on our state object
+    // use this.setState
+    // loop through the arr
+    // find which element we clicked update the "pruchased" property
+    this.setState({
+      groceries: this.state.todo.map(action => {
+        if (action.id === id) {
+          return {
+            ...item,
+            completed: !item.completed
+          };
+        } else {
+          return action;
+        }
+      })
+    });
+  };
     // Add and Delete for todoForm
     addItem = taskName => {
       const newTask = {
