@@ -1,12 +1,13 @@
 import React from 'react'
-import { Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
 
-
-const TodoList = () => {
+const TodoList = props => {
     return (
-       <div></div>
-            )
-        };
-        
+        <div>
+            
+        </div>
+    )
+}
+
 export default TodoList
+
         
